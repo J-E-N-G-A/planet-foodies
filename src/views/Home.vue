@@ -16,7 +16,6 @@ import ShaneCat from "../assets/SpaceCatsShane.png"
 		</h1>
 		<div id="Foodie">
 			<p>At this planet, we want to be able to make sure you are able to eat out with friends. (now with space cats)</p>
-			<router-link to="/result">Want to learn more? Click here</router-link>
 		</div>
 		<Globe :size="1000" :center="true"></Globe>
 		<img id="cat-julius" :src="JuliusCat"/>
@@ -50,16 +49,16 @@ body {
 }
 
 #Foodie {
-  font-size: 50px;
-  z-index: 1;
-  font-family: Space;
-  width: 80%;
+font-size: 50px;
+z-index: 1;
+font-family: Space;
+width: 80%;
 }
 
 #BigFoodie {
-  font-size: 100px;
-  z-index: 1;
-  font-family: Space;
+font-size: 100px;
+z-index: 1;
+font-family: Space;
 }
 
 #cat-julius {
@@ -106,4 +105,66 @@ body {
   height: 200px;
   z-index: 2;
 }
+
+@media screen and (max-width: 600px) {  
+  #Foodie {
+    font-size: 20px;
+    z-index: 1;
+    font-family: Space;
+    width: 50%;
+  }
+  
+  #BigFoodie {
+    font-size: 40px;
+    z-index: 1;
+    font-family: Space;
+  }
+  
+  #cat-julius {
+      position: absolute;
+      left:20%;
+      top: 80%;
+      width: 50px;
+      height: 50px;
+      z-index: 2;
+    }
+    
+    #cat-eddy {
+      position: absolute;
+      left:70%;
+      bottom: 10%;
+      width: 50px;
+      height: 50px;
+      z-index: 2;
+    }
+    
+    #cat-shane {
+      position: absolute;
+      right:10%;
+      top: 70%;
+      width: 50px;
+      height: 50px;
+      z-index: 20
+    }
+    
+    #cat-ani {
+      position: absolute;
+      right:70%;
+      top: 20%;
+      width: 50px;
+      height: 50px;
+      z-index: 2;
+    }
+    
+    #cat-gerard {
+      position: absolute;
+      right:10%;
+      bottom: 40%;
+      width: 50px;
+      height: 50px;
+      z-index: 2;
+    }
+}
+
+
 </style>
