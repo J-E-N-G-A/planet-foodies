@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://github.com/J-E-N-G-A.github.io/planet-foodies
+      url: https://j-e-n-g-a.github.io/planet-foodies/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
