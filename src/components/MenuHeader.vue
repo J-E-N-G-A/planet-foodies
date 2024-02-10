@@ -18,6 +18,8 @@
         @select="handleSelect"
         default-active
         :router="true"
+        background-color="#000000"
+        text-color="#FFFFFF"
     >
         <el-menu-item  index="/">Home</el-menu-item>
         <el-menu-item  index="/prompt-response">Prompt Response</el-menu-item>

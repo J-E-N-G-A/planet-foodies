@@ -8,7 +8,6 @@ import PlanetHeader from "./components/MenuHeader.vue"
 		<ElHeader class="header">
 			<ElAffix class="header__affix">
 				<PlanetHeader />
-				<ElDivider />
 			</ElAffix>
 		</ElHeader>
 		<ElMain>
@@ -24,6 +23,8 @@ import PlanetHeader from "./components/MenuHeader.vue"
 }
 
 .header {
-	
+	width: 100%;
+	height: auto;
+	padding: 0;
 }
 </style>
