@@ -35,8 +35,10 @@ onMounted(() => {
 
 </script>
 <template>
-	<h1>Result</h1>
-	<canvas id="globe" ref="el"></canvas>
+	<div>
+		<h1>Result</h1>
+		<canvas id="globe" ref="el"></canvas>
+	</div>
 </template>
 
 <style scoped>
