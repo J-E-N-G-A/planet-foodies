@@ -1,17 +1,14 @@
 <script setup>
 import { reactive } from 'vue'
-import { ElForm, ElFormItem, ElSelect, ElOption, ElCol, ElDatePicker, ElTimePicker, ElSwitch, ElCheckboxGroup, ElCheckbox, ElRadioGroup, ElRadio, ElButton } from 'element-plus'
+import { ElForm, ElFormItem, ElButton } from 'element-plus'
 
 // do not use same name with ref
 const form = reactive({
-  name: '',
-  region: '',
-  date1: '',
-  date2: '',
+  activity: '',
   delivery: false,
   type: [],
   resource: '',
-  desc: '',
+  food: '',
 })
 
 const onSubmit = () => {
@@ -28,12 +25,12 @@ const onSubmit = () => {
 </script>
 
 <template>
-    <el-form :model="form" label-width="120px">
-    <el-form-item label="Activity name">
-        <el-input v-model="form.desc" type="textarea" />
+    <el-form :model="form" label-width="120px" >
+    <el-form-item label="What physical activity didja do?">
+        <el-input v-model="form.activity" type="textarea" />
     </el-form-item>
-    <el-form-item label="Activity form">
-        <el-input v-model="form.desc" type="textarea" />
+    <el-form-item label="What didja eat?">
+        <el-input v-model="form.food" type="textarea" />
     </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="onSubmit">Submit</el-button>

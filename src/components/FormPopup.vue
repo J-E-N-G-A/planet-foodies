@@ -31,9 +31,11 @@ export default {
       </el-button>
       <el-dialog
         v-model="dialogVisible"
-        title="Tips"
-        width="500"
+        title="We help with your eating habits."
+        width="300"
         :before-close="handleClose"
+        class="dialog"
+        style="max-width: 85%"
       >
         <NutrionalForm />
         <!-- <template #footer>
