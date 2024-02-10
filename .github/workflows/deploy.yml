@@ -25,13 +25,11 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://github.com/J-E-N-G-A/planet-foodies
+      url: https://j-e-n-g-a.github.io/planet-foodies/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          path: frontend/
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
@@ -47,7 +45,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
-          path: './dist'
+          path: 'frontend/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
