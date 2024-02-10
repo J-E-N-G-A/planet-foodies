@@ -7,7 +7,23 @@ import AniCat from "../assets/SpaceCatsAni.png"
 import GerardCat from "../assets/SpaceCatsGerard.png"
 import ShaneCat from "../assets/SpaceCatsShane.png"
 
+
+
 </script>
+
+<script>
+import SpaceBackground from "../assets/space.jpg"
+import Font from "../assets/spacey-font.otf"
+export default {
+  data() {
+    return {
+      bg: SpaceBackground,
+      font: Font,
+    }
+  }
+}
+</script>
+
 <template>
 	 <div class="app">
 		<h1 id="BigFoodie">
@@ -29,7 +45,7 @@ import ShaneCat from "../assets/SpaceCatsShane.png"
 html,
 body {
   margin: 0;
-  background-image: url("../src/assets/space.jpg");
+  background-image: v-bind(bg);
   color: white;
   font-family: sans-serif;
   text-align: center;
@@ -44,7 +60,7 @@ body {
 
 @font-face {
   font-family: Space;
-  src: url("../src/assets/spacey-font.otf");
+  src: v-bind(font);
 }
 
 #Foodie {
@@ -56,7 +72,7 @@ width: 80%;
 
 #BigFoodie {
 font-size: 100px;
-z-index: 1;
+z-index: 100;
 font-family: Space;
 }
 
@@ -89,7 +105,7 @@ font-family: Space;
 
 #cat-ani {
   position: absolute;
-  right:80%;
+  right:85%;
   top: 20%;
   width: 200px;
   height: 200px;
@@ -149,7 +165,7 @@ font-family: Space;
     #cat-ani {
       position: absolute;
       right:70%;
-      top: 20%;
+      top: 30%;
       width: 50px;
       height: 50px;
       z-index: 2;
