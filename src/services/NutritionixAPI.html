@@ -1,0 +1,94 @@
+<button onclick="performNutritionFunction()">Get Nutrition Data</button>
+<script>
+    var foodResponse;
+
+    function NutritionFunction(NutritionInput, callback) {
+        var requestNutrition = JSON.stringify({
+            "query": NutritionInput
+        });
+
+        fetch('https://trackapi.nutritionix.com/v2/natural/nutrients', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-app-id': 'ce2a901f',
+                'x-app-key': '2936d24d9efbc221b1ca610163bbc11a'
+            },
+            body: requestNutrition
+        })
+        .then(response => response.json())
+        .then(data => {
+            foodResponse = data; 
+            callback(data);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function performNutritionFunction() {
+        var NutritionInput = prompt("What did you eat?");
+        if (NutritionInput) {
+            NutritionFunction(NutritionInput, function (nutritionData) {
+                console.log(nutritionData);
+            });
+        }
+    }
+</script>
+
+<button onclick="performActivityFunction()">Get Activity Data</button>
+<script>
+    var activityResponse;
+
+    function ActivityFunction(activityInput, callback) {
+        var requestActivity = JSON.stringify({
+            "query": activityInput
+        });
+
+        fetch('https://trackapi.nutritionix.com/v2/natural/exercise', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-app-id': 'ce2a901f',
+                'x-app-key': '2936d24d9efbc221b1ca610163bbc11a'
+            },
+            body: requestActivity
+        })
+        .then(response => response.json())
+        .then(data => {
+            activityResponse = data; 
+            callback(data);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function performActivityFunction() {
+        var activityInputValue = prompt("What physical activity was done?");
+        if (activityInputValue) {
+            ActivityFunction(activityInputValue, function (activityData) {
+                console.log(activityData);
+            });
+        }
+    }
+</script>
+
+<button onclick="performCalorieFunction()">Calculate Calories</button>
+<script>
+
+    function CalorieSubtract() {
+        if (foodResponse && activityResponse) {
+            var calorieInformation = foodResponse.foods[0].nf_calories;
+            var caloriePhysical = activityResponse.exercises[0].nf_calories;
+
+            var calorieActivity = calorieInformation - caloriePhysical;
+
+            Number((calorieActivity).toFixed(1));
+            
+            console.log("Calories Activity: " + calorieActivity);
+        } else {
+            console.log("Please get both nutrition and activity data first.");
+        }
+    }
+
+    function performCalorieFunction() {
+        CalorieSubtract();
+    }
+</script>
