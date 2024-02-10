@@ -1,18 +1,19 @@
 <script setup>
 import { reactive } from 'vue'
 import { ElForm, ElFormItem, ElButton } from 'element-plus'
+import { NutritionFunction, ActivityFunction } from "../services/NutrionixAPI.js"
 
 // do not use same name with ref
 const form = reactive({
   activity: '',
-  delivery: false,
-  type: [],
-  resource: '',
   food: '',
 })
 
-const onSubmit = () => {
-  console.log('submit!')
+const onSubmit = async (form) => {
+    const {activity, food} = JSON.parse(JSON.stringify(form))
+    const activityRes = await ActivityFunction(activity)
+    const foodRes = await NutritionFunction(food)
+    console.log(activityRes, foodRes)
 }
 </script>
 
@@ -33,7 +34,7 @@ const onSubmit = () => {
         <el-input v-model="form.food" type="textarea" />
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="onSubmit">Submit</el-button>
+      <el-button type="primary" @click="() => onSubmit(form)">Submit</el-button>
       <!-- <el-button>Clear</el-button> -->
     </el-form-item>
   </el-form>
