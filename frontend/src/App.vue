@@ -37,12 +37,12 @@ onMounted(() => {
 
 <template>
   <div class="app">
-    <h1 id="Foodie">
-      Welcome to Planet Foodie
-      <div class="Welcome__enable">
-        <p>At this planet, we want to be able to make sure you are able to eat out with friends. </p>
-      </div>
+    <h1 id="BigFoodie">
+      Welcome to Planet Foodie 
     </h1>
+      <div id="Foodie">
+        <p>At this planet, we want to be able to make sure you are able to eat out with friends. (now with space cats)</p>
+      </div>
     <canvas id="globe" ref="el"></canvas>
     <img id="cat-julius" src="../src/assets/Space Cat - Julius.png"/>
     <img id="cat-eddy" src="../src/assets/Space Cats - Eddy.png"/>
@@ -77,6 +77,13 @@ body {
 
 #Foodie {
   font-size: 50px;
+  z-index: 1;
+  font-family: Space;
+  width: 80%;
+}
+
+#BigFoodie {
+  font-size: 100px;
   z-index: 1;
   font-family: Space;
 }
