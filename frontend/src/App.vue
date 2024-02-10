@@ -3,26 +3,27 @@ import { ref, onMounted } from 'vue';
 import createGlobe from 'cobe';
 import { VmButton, VmContainer } from 'vue3-material';
 
+const GLOBE_SIZE = 1000
 const el = ref();
 const phi = ref(0);
 
 onMounted(() => {
   const globe = createGlobe(el.value, {
     devicePixelRatio: 2,
-    width: 300 * 2,
-    height: 300 * 2,
+    width: GLOBE_SIZE*2,
+    height: GLOBE_SIZE*2,
     phi: 0,
-    theta: 0,
-    dark: 1,
+    theta: 0.5,
+    dark: 0.8,
     diffuse: 1.2,
-    mapSamples: 16000,
+    mapSamples: 5000,
     mapBrightness: 6,
-    baseColor: [0.3, 0.3, 0.3],
+    baseColor: [0.6, 0.5, 0.7],
     markerColor: [0.1, 0.8, 1],
-    glowColor: [1, 1, 1],
+    glowColor: [.6, .5, 1],
     markers: [
       // longitude latitude
-      { location: [41.8781, -87.6298], size: 0.3 },
+      { location: [41.8781, -87.6298], size: 0.1 },
     ],
     onRender: (state) => {
       // Called on every animation frame.
@@ -37,21 +38,26 @@ onMounted(() => {
 <template>
   <div class="app">
     <h1 id="Foodie">
-      
       Welcome to Planet Foodie
       <div class="Welcome__enable">
-        At this planet, we want to be able to make sure you are able to eat out with friends.
+        <p>At this planet, we want to be able to make sure you are able to eat out with friends. </p>
       </div>
     </h1>
-    <canvas :style="{ width: '300px', height: '300px' }" ref="el"></canvas>
+    <canvas id="globe" ref="el"></canvas>
+    <img id="cat-julius" src="../src/assets/Space Cat - Julius.png"/>
+    <img id="cat-eddy" src="../src/assets/Space Cats - Eddy.png"/>
+    <img id="cat-shane" src="../src/assets/Space Cats - Shane.png"/>
+    <img id="cat-gerard" src="../src/assets/Space Cats - Gerard.png"/>
+    <img id="cat-ani" src="../src/assets/Space Cats - Ani.png"/>
   </div>
+  
 </template>
 
 <style>
 html,
 body {
   margin: 0;
-  background: black;
+  background-image: url("../src/assets/space.jpg");
   color: white;
   font-family: sans-serif;
   text-align: center;
@@ -61,12 +67,70 @@ body {
   display: grid;
   place-items: center;
   place-content: center;
-  height: 100vh;
+  height: 50%;
+}
+
+@font-face {
+  font-family: Space;
+  src: url("../src/assets/spacey-font.otf");
 }
 
 #Foodie {
-  absolute: absolute;
-  top: 100px;
-  font-size: 60px;
+  font-size: 50px;
+  z-index: 1;
+  font-family: Space;
+}
+
+#globe {
+  position: absolute;
+  top:20%;
+  width: 1000px; /* GLOBE_SIZE */
+  height: 1000px; /* GLOBE_SIZE */
+}
+
+
+#cat-julius {
+  position: absolute;
+  left:20%;
+  bottom: 20%;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+
+#cat-eddy {
+  position: absolute;
+  left:70%;
+  bottom: 10%;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+
+#cat-shane {
+  position: absolute;
+  right:10%;
+  top: 70%;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+
+#cat-ani {
+  position: absolute;
+  right:80%;
+  top: 20%;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+
+#cat-gerard {
+  position: absolute;
+  left:80%;
+  bottom: 40%;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
 }
 </style>
