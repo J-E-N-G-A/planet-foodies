@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, ReactiveEffect } from 'vue';
+import { ref, onMounted, ReactiveEffect, onUnmounted } from 'vue';
 import createGlobe from 'cobe';
 
 const props = defineProps({
@@ -10,9 +10,9 @@ const props = defineProps({
 var GLOBE_SIZE = props.size
 const el = ref();
 const phi = ref(0);
-
+var globe;
 onMounted(() => {
-  const globe = createGlobe(el.value, {
+  globe = createGlobe(el.value, {
     devicePixelRatio: 2,
     width: GLOBE_SIZE*2,
     height: GLOBE_SIZE*2,
@@ -36,6 +36,10 @@ onMounted(() => {
       phi.value += 0.03;
     },
   });
+});
+
+onUnmounted(() => {
+  globe.destroy();
 });
 
 </script>
