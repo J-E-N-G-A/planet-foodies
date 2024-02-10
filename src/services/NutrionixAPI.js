@@ -3,7 +3,7 @@ export async function NutritionFunction(NutritionInput) {
         "query": NutritionInput
     });
 
-    return await fetch('https://trackapi.nutritionix.com/v2/natural/nutrients', {
+    const res = await fetch('https://trackapi.nutritionix.com/v2/natural/nutrients', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -12,9 +12,7 @@ export async function NutritionFunction(NutritionInput) {
         },
         body: requestNutrition
     })
-    .then(response => response.json())
-    .then(data => data)
-    .catch(error => console.error('Error:', error));
+    return res.json()
 }
 
 export async function ActivityFunction(activityInput) {
@@ -22,16 +20,20 @@ export async function ActivityFunction(activityInput) {
         "query": activityInput
     });
 
-    await fetch('https://trackapi.nutritionix.com/v2/natural/exercise', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'x-app-id': 'ce2a901f',
-            'x-app-key': '2936d24d9efbc221b1ca610163bbc11a'
-        },
-        body: requestActivity
-    })
-    .then(response => response.json())
-    .then(data => data)
-    .catch(error => console.error('Error:', error));
+    const res = await fetch('https://trackapi.nutritionix.com/v2/natural/exercise', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-app-id': 'ce2a901f',
+                    'x-app-key': '2936d24d9efbc221b1ca610163bbc11a'
+                },
+                body: requestActivity
+            })
+    return res.json()
+    // .then(response => response.json())
+    // .then(data => {
+    //     console.log(data);
+    //     return data
+    // })
+    // .catch(error => console.error('Error:', error));
 }

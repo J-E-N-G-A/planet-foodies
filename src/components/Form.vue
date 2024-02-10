@@ -11,9 +11,10 @@ const form = reactive({
 
 const onSubmit = async (form) => {
     const {activity, food} = JSON.parse(JSON.stringify(form))
+    console.log(activity)
     const activityRes = await ActivityFunction(activity)
     const foodRes = await NutritionFunction(food)
-    console.log(activityRes, foodRes)
+    console.log({activityRes, foodRes})
 }
 </script>
 
