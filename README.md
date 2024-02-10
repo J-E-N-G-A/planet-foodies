@@ -35,7 +35,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 To run
 
-npn i
+npn i  
 npn run dev
 
 # Link to the website
