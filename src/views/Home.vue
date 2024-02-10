@@ -1,4 +1,5 @@
 <script setup>
+import FormPopup from '../components/FormPopup.vue';
 import Globe from '../components/Globe.vue';
 
 import JuliusCat from "../assets/SpaceCatsJulius.png"
@@ -6,8 +7,6 @@ import EddyCat from "../assets/SpaceCatsEddy.png"
 import AniCat from "../assets/SpaceCatsAni.png"
 import GerardCat from "../assets/SpaceCatsGerard.png"
 import ShaneCat from "../assets/SpaceCatsShane.png"
-
-
 
 </script>
 
@@ -31,6 +30,7 @@ export default {
 		</h1>
 		<div id="Foodie">
 			<p>At this planet, we want to be able to make sure you are able to eat out with friends. (now with space cats)</p>
+      <FormPopup />
 		</div>
 		<Globe :size="1000" :center="true"></Globe>
 		<img id="cat-julius" :src="JuliusCat"/>
@@ -72,8 +72,8 @@ width: 80%;
 
 #BigFoodie {
 font-size: 100px;
-z-index: 100;
 font-family: Space;
+z-index: 1;
 }
 
 #cat-julius {
@@ -82,7 +82,6 @@ font-family: Space;
   top: 80%;
   width: 200px;
   height: 200px;
-  z-index: 2;
 }
 
 #cat-eddy {
@@ -91,7 +90,6 @@ font-family: Space;
   bottom: 10%;
   width: 200px;
   height: 200px;
-  z-index: 2;
 }
 
 #cat-shane {
@@ -100,7 +98,6 @@ font-family: Space;
   top: 70%;
   width: 200px;
   height: 200px;
-  z-index: 2;
 }
 
 #cat-ani {
@@ -109,7 +106,6 @@ font-family: Space;
   top: 20%;
   width: 200px;
   height: 200px;
-  z-index: 2;
 }
 
 #cat-gerard {
@@ -118,7 +114,6 @@ font-family: Space;
   bottom: 40%;
   width: 200px;
   height: 200px;
-  z-index: 2;
 }
 
 @media screen and (max-width: 600px) {  
@@ -141,7 +136,6 @@ font-family: Space;
       top: 80%;
       width: 50px;
       height: 50px;
-      z-index: 2;
     }
     
     #cat-eddy {
@@ -150,7 +144,6 @@ font-family: Space;
       bottom: 10%;
       width: 50px;
       height: 50px;
-      z-index: 2;
     }
     
     #cat-shane {
@@ -159,7 +152,6 @@ font-family: Space;
       top: 70%;
       width: 50px;
       height: 50px;
-      z-index: 20
     }
     
     #cat-ani {
@@ -168,7 +160,6 @@ font-family: Space;
       top: 30%;
       width: 50px;
       height: 50px;
-      z-index: 2;
     }
     
     #cat-gerard {
@@ -177,7 +168,6 @@ font-family: Space;
       bottom: 40%;
       width: 50px;
       height: 50px;
-      z-index: 2;
     }
 }
 
