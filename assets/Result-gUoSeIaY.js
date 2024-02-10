@@ -1,1 +1,0 @@
-import{G as e}from"./Globe-D9akijAc.js";import{h as t,a,F as s,k as o,o as r}from"./index-B5-6LJBL.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const c=o("h1",null,"Result",-1),i={__name:"Result",setup(l){return(n,_)=>(r(),t(s,null,[c,a(e,{size:2300,center:!1})],64))}};export{i as default};
