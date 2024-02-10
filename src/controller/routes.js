@@ -1,19 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
-
-// loading which view to show - dev or prod mode
-const baseURL = import.meta.env.VITE_NODE_ENV === "production"
-				? "/planet-foodies/"
-				: "/"
-console.log({ENV: baseURL})
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 // views
 const routes = [
-	{ path: `${baseURL}`, component: () => import('../views/Home.vue') },	
-	{ path: `${baseURL}result`, component: import('../views/Result.vue') },	
+	{ path: `/`, component: () => import('../views/Home.vue') },	
+	{ path: `/result`, component: import('../views/Result.vue') },	
 ]
 
 const router = createRouter({
-	history: createWebHistory(baseURL),
+	history: createWebHashHistory(),
 	routes,
 })
 
