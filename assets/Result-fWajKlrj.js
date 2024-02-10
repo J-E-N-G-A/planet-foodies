@@ -1,1 +1,0 @@
-import{G as e}from"./Globe-BLBGqW_V.js";import{c as t,b as a,F as s,a as o,o as r}from"./index-BTQOouyD.js";const c=o("h1",null,"Result",-1),p={__name:"Result",setup(l){return(n,_)=>(r(),t(s,null,[c,a(e,{size:2e3,center:!1})],64))}};export{p as default};
