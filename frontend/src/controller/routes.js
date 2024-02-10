@@ -1,4 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
+// loading which view to show - dev or prod mode
+const baseURL = import.meta.env.VITE_NODE_ENV === "production"
+				? "/planet-foodies/"
+				: ""
+console.log({ENV: baseURL})
+
 // views
 const routes = [
 	{ path: "/", component: () => import('../views/Home.vue') },	
@@ -6,7 +13,7 @@ const routes = [
 ]
 
 const router = createRouter({
-	history: createWebHistory('/planet-foodies/'),
+	history: createWebHistory(baseURL),
 	routes,
 })
 
