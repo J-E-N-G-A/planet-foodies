@@ -106,7 +106,7 @@ body {
 #cat-julius {
   position: absolute;
   left:20%;
-  bottom: 20%;
+  top: 80%;
   width: 200px;
   height: 200px;
   z-index: 2;
