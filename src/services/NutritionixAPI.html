@@ -1,0 +1,73 @@
+//Onclick function to return the entire JSON file for the Nutrition
+<button onclick="performNutritionFunction()">Click</button>
+
+<script>
+    function NutritionFunction(NutritionInput, callback){
+
+        var requestNutrition = JSON.stringify({
+            "query": NutritionInput
+        });
+        
+        var options = {
+            'method': 'POST',
+            'url': 'https://trackapi.nutritionix.com/v2/natural/nutrients',
+            'headers': {
+            'Content-Type': 'application/json',
+            'x-app-id': 'ce2a901f',    
+            'x-app-key': '2936d24d9efbc221b1ca610163bbc11a'  
+        },
+        body: requestNutrition
+        };
+        
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+
+            console.log(body);
+            callback(body); 
+        });
+    }
+
+    var NutritionInput = prompt("What did you eat?");
+
+    activityInput(NutritionInput, function (result) {
+        console.log(result); 
+    });
+</script>
+
+
+
+//Onclick function to return the entire JSON file for the Activity
+<button onclick="performActivityFunction()">Click</button>
+
+<script>
+    function ActivityFunction(activityInput, callback){
+
+        var requestActivity = JSON.stringify({
+            "query": activityInput
+        });
+        
+        var options = {
+        'method': 'POST',
+        'url': 'https://trackapi.nutritionix.com/v2/natural/exercise',
+        'headers': {
+            'Content-Type': 'application/json',
+            'x-app-id': 'ce2a901f', 
+            'x-app-key': '2936d24d9efbc221b1ca610163bbc11a'  
+        },
+        body: requestActivity
+        };
+        
+        request(options, function (error, response, body) {
+            if (error) throw new Error(error);
+
+            console.log(body);
+            callback(body); 
+        });
+    }
+
+    var activityInput = prompt("What physical activity was done?");
+
+    activityInput(activityInput, function (result) {
+        console.log(result); 
+    });
+</script>
