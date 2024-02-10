@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import createGlobe from 'cobe';
-import NcButton from '@nextcloud/vue'
+import { VmButton, VmContainer } from 'vue3-material';
 
 const el = ref();
 const phi = ref(0);
@@ -36,22 +36,14 @@ onMounted(() => {
 
 <template>
   <div class="app">
-    <h1 id="Foodie"
-      class="Welcome">
+    <h1 id="Foodie">
+      
       Welcome to Planet Foodie
       <div class="Welcome__enable">
         At this planet, we want to be able to make sure you are able to eat out with friends.
       </div>
     </h1>
     <canvas :style="{ width: '300px', height: '300px' }" ref="el"></canvas>
-    <h1>
-      <div>Planet Foodie</div>
-      <div>Planet Foodie</div>
-      <div>Planet Foodie</div>
-      <div>Planet Foodie</div>
-      <div>Planet Foodie</div>
-      <div>Planet Foodie</div>
-    </h1>
   </div>
 </template>
 
@@ -73,7 +65,7 @@ body {
 }
 
 #Foodie {
-  relative: absolute;
+  absolute: absolute;
   top: 100px;
   font-size: 60px;
 }
