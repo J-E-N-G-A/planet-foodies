@@ -15,6 +15,15 @@ const onSubmit = async (form) => {
     const activityRes = await ActivityFunction(activity)
     const foodRes = await NutritionFunction(food)
     console.log({activityRes, foodRes})
+    let calsIn = 0
+    let calsOut = 0
+    foodRes.foods.forEach(element => {
+        calsIn += element.nf_calories
+    });
+    activityRes.exercises.forEach(element => {
+        calsOut += element.nf_calories
+    })
+    alert(`You did a lot of activity! Our machine learning algorithms guess that you burned ${calsOut} calories for that activity, and you consumed ${calsIn} calories`)
 }
 </script>
 
