@@ -13,8 +13,10 @@
   "dependencies": {
     "cobe": "^0.6.3",
     "element-plus": "^2.5.5",
+    "leaflet": "^1.9.4",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
+    "vue2-leaflet": "^2.7.1",
     "vue3-material": "^1.0.8"
   },
   "devDependencies": {
