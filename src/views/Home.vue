@@ -1,6 +1,5 @@
 <script setup>
 import Globe from '../components/Globe.vue';
-import { VmButton, VmContainer } from 'vue3-material';
 
 import JuliusCat from "../assets/SpaceCatsJulius.png"
 import EddyCat from "../assets/SpaceCatsEddy.png"
