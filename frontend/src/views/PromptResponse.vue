@@ -2,5 +2,5 @@
 
 </script>
 <template>
-	<h1>Result</h1>
+	<h1>Home YUHHHHHHH</h1>
 </template>
