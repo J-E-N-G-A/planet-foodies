@@ -30,7 +30,7 @@ export default {
 		</h1>
 		<div id="Foodie">
 			<p>At this planet, we want to be able to make sure you are able to eat out with friends. (now with space cats)</p>
-      <FormPopup />
+      		<FormPopup />
 		</div>
 		<Globe :size="1000" :center="true"></Globe>
 		<img id="cat-julius" :src="JuliusCat"/>
