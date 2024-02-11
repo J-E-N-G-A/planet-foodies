@@ -6,7 +6,7 @@ import PromptResponse from '../views/PromptResponse.vue'
 
 // views
 const routes = [
-	{ path: `/`, component: () => Home },	
+	{ path: `/`, component: Home },	
 	{ path: `/result`, component: Result },
 	{ path: `/maps`, component: Map },
 	{ path: `/prompt-response`, component: PromptResponse },
