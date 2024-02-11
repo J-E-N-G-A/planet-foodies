@@ -1,6 +1,10 @@
+# Link to the website
+https://j-e-n-g-a.github.io/planet-foodies/#/
+
 # Introduction and about the project
 
 ## Inspiration and Coding Prompt Track
+
 We chose to go down the "Health" prompt, specifically down the inclusivity in health route
 
 ## Challenges we ran into
@@ -17,11 +21,17 @@ With only two days, we were able to demonstrate our skills with
 - The use of API's, showcased by using Nutrionix's free API
 - Vue.js
 
+## Going forward...
+- Implement more views, seperating the home and results view!
+- Add filtering of areas with the map component within the square mile radius the user specified with his query
+- Fully automate the CI/CD with GH-Actions, as we did in the beginning of the project (script running was just faster during the hackathon, but its better practice to use GH-Actions)
+
+# For Developers / Contributors
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/)
 
-# For Developers / Contributors
 ## To run
 
 - clone the repo
@@ -31,5 +41,3 @@ With only two days, we were able to demonstrate our skills with
 ## To deploy
 - in the root directory, run `npm run deploy`
 
-# Link to the website
-https://j-e-n-g-a.github.io/planet-foodies/#/
