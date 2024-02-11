@@ -1,42 +1,35 @@
 # Introduction and about the project
 
- Inspiration
+## Inspiration and Coding Prompt Track
+We chose to go down the "Health" prompt, specifically down the inclusivity in health route
 
-To help people diet for the gym.
- What it does
+## Challenges we ran into
+We knew that this would be a project that we might want to work on after the hackathon ended, so we wanted to set this project up using the best industry practices possible. We (tried) using conventional commits (time crunches got us good), but the biggest challenge was when we decided to implement our CI/CD system, that took a lot of time to setup. But it now works!
 
-Takes in information from the user and calculates the difference from the amount of calories needed and amount of calories eaten. 
- How we built it
+## Picking the correct techstack and scope for the project. 
+We decided to use Vue.js, because we knew the other competitors would know React, as there was an intro to React workshop done the days prior to the hackathon. We wanted to wow the competitors by using Vue.js's specific router library, and while it was tricky to setup, it ended up working!
 
-We made a home screen that displays the form and for the background we made it a space theme. Then using the api, we would get the nutrition information from the response.
-Challenges we ran into
-
-Picking the correct techstack and scope for the project. 
-Accomplishments that we're proud of
-
-We were able to make fully functional home screen.
-What we learned
-
-We learned how to use vue js, and used apis for the first time.
-
-Features that will come in the future
-
-Implementation of a a backend for the project that can do additional things such as storing information, providing different dietary options.
-
-
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Achievements
+With only two days, we were able to demonstrate our skills with
+- CI/CD
+- Contributing to a project with multiple developers in a fast paced environment
+- Designing and putting that design to life within a website
+- The use of API's, showcased by using Nutrionix's free API
+- Vue.js
 
 ## Recommended IDE Setup
 
+- [VS Code](https://code.visualstudio.com/)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# For Developers / Contributors
+## To run
 
-To run
-
-npn i  
-npn run dev
+- clone the repo
+- in the root directory, run these following commands
+    - `npm i`
+    - `npm run dev`
+## To deploy
+- in the root directory, run `npm run deploy`
 
 # Link to the website
 https://j-e-n-g-a.github.io/planet-foodies/#/
