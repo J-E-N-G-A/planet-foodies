@@ -1,7 +1,9 @@
-# Link to the website and corresponding video!
-https://j-e-n-g-a.github.io/planet-foodies/#/
-https://www.youtube.com/watch?v=jxcbZ4fU-_g&t=16s
+# Link to the website and corresponding video and presentation slides!
+* https://j-e-n-g-a.github.io/planet-foodies/#/
 
+* https://www.youtube.com/watch?v=jxcbZ4fU-_g&t=16s
+
+* https://docs.google.com/presentation/d/1KdPBiOIJddyFgWG4PryY8VEVbBj1XZeqbESeCixrD9c/edit?usp=sharing
 # Introduction and about the project
 
 ## Inspiration and Coding Prompt Track
